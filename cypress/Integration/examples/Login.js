@@ -1,7 +1,7 @@
 describe('TikTokcases' ,function(){
   before(function() {
       
-      cy.fixture('example').then(function(data)
+      cy.fixture('examples').then(function(data)
       {
       this.data = data
       })
