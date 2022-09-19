@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-26T13:25:54.535Z",
+    "end": "2022-08-26T13:26:28.991Z",
+    "duration": 34456,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e943025e-2c06-4e43-b091-89fc60c3e03d",
+      "title": "",
+      "fullFile": "cypress\\Integration\\examples\\Twitter.js",
+      "file": "cypress\\Integration\\examples\\Twitter.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "18943e5e-39ca-45f8-bfd5-590ff3cb4606",
+          "title": "App",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "App Login",
+              "timedOut": null,
+              "duration": 28283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const resizeObserverLoopErrRe = /^[^(ResizeObserver loop limit exceeded)]/;\nCypress.on('uncaught:exception', err => {\n  /* returning false here prevents Cypress from failing the test */\n  if (resizeObserverLoopErrRe.test(err.message)) {\n    return false;\n  }\n});\ncy.visit(\"https://multi-account.sellernext.com/apps/twitter/panel/\");\ncy.get(':nth-child(1) > .inte-formElement--Wrap > .inte-formElemet--Inner > .inte-formElement').type(\"swatantrasrivastava@cedcommerce.com\");\ncy.get(':nth-child(2) > .inte-formElement--Wrap > .inte-formElemet--Inner > .inte-formElement').type(\"Swat123@\");\ncy.get(':nth-child(5) > .inte-btn').click;\ncy.get(':nth-child(5) > .inte-btn').contains('Sign In').click(); // Product upload -single , multiple and bulk\ncy.get('.inte__AutoComplete > :nth-child(1) > .inte-formElement--Wrap > .inte-formElemet--Inner > .inte-formElement').click().type('t-shirt').type('{enter}');\ncy.wait(5000);\ncy.get('.ant-table-selection-column > .ant-checkbox-wrapper > .ant-checkbox > .ant-checkbox-input').check({\n  force: true\n});\ncy.get('.inte-flex--spacing-loose > :nth-child(2) > .inte-btn').click({\n  force: true\n});\ncy.get('.inte-Modal-Footer__FooterContent > .inte-flex > :nth-child(2) > .inte-btn').click();\ncy.get('.intel-flex--distribute-end > :nth-child(1) > .inte-btn > .inte-btn__icon > svg').click({\n  force: true\n});\ncy.url().should('include', 'activities');\ncy.go('back');",
+              "err": {},
+              "uuid": "cc293dec-62af-4d25-a358-873476cbd1a4",
+              "parentUUID": "18943e5e-39ca-45f8-bfd5-590ff3cb4606",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc293dec-62af-4d25-a358-873476cbd1a4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28283,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
